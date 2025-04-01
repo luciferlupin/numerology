@@ -23,13 +23,17 @@ app.set('views', path.join(__dirname, 'views'));
 const TESTIMONIALS_FILE = path.join(__dirname, 'data', 'testimonials.json');
 
 // Ensure data directory exists
-if (!fs.existsSync(path.join(__dirname, 'data'))) {
-  fs.mkdirSync(path.join(__dirname, 'data'));
-}
+try {
+  if (!fs.existsSync(path.join(__dirname, 'data'))) {
+    fs.mkdirSync(path.join(__dirname, 'data'), { recursive: true });
+  }
 
-// Initialize testimonials file if it doesn't exist
-if (!fs.existsSync(TESTIMONIALS_FILE)) {
-  fs.writeFileSync(TESTIMONIALS_FILE, JSON.stringify([], null, 2));
+  // Initialize testimonials file if it doesn't exist
+  if (!fs.existsSync(TESTIMONIALS_FILE)) {
+    fs.writeFileSync(TESTIMONIALS_FILE, JSON.stringify([], null, 2));
+  }
+} catch (error) {
+  console.error('Error initializing data directory or files:', error);
 }
 
 // Helper function to read testimonials
@@ -148,9 +152,14 @@ app.post('/api/calculate', (req, res) => {
 });
 
 // Start server
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
+
+// Export the Express app for Vercel
+module.exports = app;
 
 // Numerology calculation functions
 function calculateLifePathNumber(birthdate) {
