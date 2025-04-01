@@ -1,0 +1,231 @@
+<%- include('partials/header') %>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Welcome to Numerology Insights</h1>
+      <p>Your trusted platform for numerology consultations. Unlock the secrets of numbers and discover insights about your life, career, and relationships.</p>
+      <a href="/booking" class="btn btn-primary">Book a Consultation</a>
+    </div>
+  </div>
+</section>
+
+<section class="how-numerology-works">
+  <div class="container">
+    <h2 class="section-title">How Numerology Works</h2>
+    <p class="section-subtitle">Discover the ancient science connecting numbers, planets, and your life path</p>
+    
+    <div class="numerology-process">
+      <div class="process-item">
+        <div class="process-icon">
+          <div class="icon-container">
+            <i class="fas fa-calculator"></i>
+          </div>
+          <div class="planet-orbit">
+            <div class="planet"></div>
+          </div>
+        </div>
+        <div class="process-content">
+          <h3>Mathematical Foundations</h3>
+          <p>Numerology uses mathematical principles to reduce birth dates and names to single digits, revealing your core numbers and life path.</p>
+        </div>
+      </div>
+      
+      <div class="process-item">
+        <div class="process-icon">
+          <div class="icon-container">
+            <i class="fas fa-globe-americas"></i>
+          </div>
+          <div class="planet-orbit">
+            <div class="planet"></div>
+          </div>
+        </div>
+        <div class="process-content">
+          <h3>Planetary Influences</h3>
+          <p>Each number resonates with specific planetary energies, creating unique vibrations that influence different aspects of your life and personality.</p>
+        </div>
+      </div>
+      
+      <div class="process-item">
+        <div class="process-icon">
+          <div class="icon-container">
+            <i class="fas fa-dna"></i>
+          </div>
+          <div class="planet-orbit">
+            <div class="planet"></div>
+          </div>
+        </div>
+        <div class="process-content">
+          <h3>Life Path Integration</h3>
+          <p>Numerology reveals how these numerical vibrations manifest in your daily life, relationships, career choices, and personal growth journey.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="numerology-chart">
+      <div class="chart-container">
+        <div class="chart-circle">
+          <div class="number-node n1">1</div>
+          <div class="number-node n2">2</div>
+          <div class="number-node n3">3</div>
+          <div class="number-node n4">4</div>
+          <div class="number-node n5">5</div>
+          <div class="number-node n6">6</div>
+          <div class="number-node n7">7</div>
+          <div class="number-node n8">8</div>
+          <div class="number-node n9">9</div>
+          <div class="connection-lines"></div>
+        </div>
+      </div>
+      <div class="chart-info">
+        <h3>The Numerology System</h3>
+        <p>Numerology is an ancient system that interprets the vibrational influences of numbers in your life. By understanding these patterns, you can gain insights into your purpose, talents, challenges, and opportunities.</p>
+        <a href="/services" class="btn btn-secondary">Explore Our Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-choose-us">
+  <div class="container">
+    <h2>Why Choose Us?</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <i class="fas fa-user-tie fa-3x"></i>
+        <h3>Experienced Numerologists</h3>
+        <p>Our team consists of professional numerologists with years of experience.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-file-alt fa-3x"></i>
+        <h3>Personalized Reports</h3>
+        <p>Receive detailed, personalized numerology reports tailored to your unique needs.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-lock fa-3x"></i>
+        <h3>Secure Booking System</h3>
+        <p>Our easy-to-use booking system ensures your information remains confidential.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-comments fa-3x"></i>
+        <h3>Confidential Consultations</h3>
+        <p>All consultations are private and confidential, providing a safe space for guidance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services-preview">
+  <div class="container">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <i class="fas fa-road fa-3x"></i>
+        <h3>Life Path Number Reading</h3>
+        <p>Discover your life's purpose and personal strengths.</p>
+        <a href="/services#life-path" class="btn btn-secondary">Learn More</a>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-signature fa-3x"></i>
+        <h3>Name Numerology Analysis</h3>
+        <p>Understand how your name influences your destiny.</p>
+        <a href="/services#name-analysis" class="btn btn-secondary">Learn More</a>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-briefcase fa-3x"></i>
+        <h3>Career & Business Numerology</h3>
+        <p>Find the best career or business path based on numerology.</p>
+        <a href="/services#career" class="btn btn-secondary">Learn More</a>
+      </div>
+    </div>
+    <div class="view-all">
+      <a href="/services" class="btn btn-outline">View All Services</a>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="container">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-slider">
+      <% if (testimonials && testimonials.length > 0) { %>
+        <% testimonials.filter(t => t.approved).forEach(testimonial => { %>
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <i class="fas fa-quote-left"></i>
+              <p>"<%= testimonial.content %>"</p>
+            </div>
+            <div class="testimonial-footer">
+              <div class="testimonial-info">
+                <h3><%= testimonial.name %></h3>
+                <p><%= testimonial.serviceType %></p>
+                <div class="rating">
+                  <% for(let i = 0; i < 5; i++) { %>
+                    <% if (i < testimonial.rating) { %>
+                      <i class="fas fa-star"></i>
+                    <% } else { %>
+                      <i class="far fa-star"></i>
+                    <% } %>
+                  <% } %>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% }); %>
+      <% } else { %>
+        <!-- Default testimonials if none are available -->
+        <div class="testimonial">
+          <div class="testimonial-content">
+            <i class="fas fa-quote-left"></i>
+            <p>"The numerology insights I received were incredibly accurate and helped me understand my life's purpose. The guidance has transformed my approach to career decisions."</p>
+          </div>
+          <div class="testimonial-footer">
+            <div class="testimonial-info">
+              <h3>Priya Sharma</h3>
+              <p>Life Path Reading</p>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-content">
+            <i class="fas fa-quote-left"></i>
+            <p>"I was skeptical at first, but the numerology reading was eye-opening. The insights about my personality traits and life challenges were spot on. Highly recommend!"</p>
+          </div>
+          <div class="testimonial-footer">
+            <div class="testimonial-info">
+              <h3>Rahul Mehta</h3>
+              <p>Comprehensive Reading</p>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% } %>
+    </div>
+    <div class="testimonial-cta">
+      <a href="/testimonials" class="btn btn-secondary">View All Testimonials</a>
+      <a href="/submit-review" class="btn btn-outline">Share Your Experience</a>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2>Ready to Discover Your Numerological Path?</h2>
+    <p>Book a consultation today and unlock the power of numbers in your life.</p>
+    <a href="/booking" class="btn btn-primary">Book Now</a>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

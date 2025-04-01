@@ -1,0 +1,415 @@
+<%- include('partials/header') %>
+
+<section class="page-header">
+  <div class="container">
+    <h1>Frequently Asked Questions</h1>
+    <p>Find answers to common questions about numerology and our services.</p>
+  </div>
+</section>
+
+<section class="faq-section">
+  <div class="container">
+    <div class="faq-search">
+      <input type="text" id="faqSearch" placeholder="Search for questions...">
+      <button><i class="fas fa-search"></i></button>
+    </div>
+    
+    <div class="faq-categories">
+      <button class="faq-category active" data-category="all">All</button>
+      <button class="faq-category" data-category="basics">Numerology Basics</button>
+      <button class="faq-category" data-category="calculations">Calculations</button>
+      <button class="faq-category" data-category="readings">Readings</button>
+      <button class="faq-category" data-category="services">Our Services</button>
+      <button class="faq-category" data-category="practical">Practical Applications</button>
+    </div>
+    
+    <div class="faq-container">
+      <!-- Numerology Basics -->
+      <div class="faq-item" data-category="basics">
+        <div class="faq-question">
+          <h3>What is numerology?</h3>
+          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+          <p>Numerology is the study of numbers and their energetic influence on human life. It is based on the belief that numbers carry specific vibrations that can reveal information about a person's character, purpose, motivations, and path in life. Numerology can be used to gain insights into various aspects of life including relationships, career, and personal growth.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item" data-category="basics">
+        <div class="faq-question">
+          <h3>What is the history of numerology?</h3>
+          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+          <p>Numerology has ancient roots that can be traced back to several civilizations including Babylonia, ancient Egypt, ancient China, and ancient India. The modern system of Western numerology is often credited to Pythagoras, the Greek mathematician and philosopher who lived in the 6th century BCE. In India, numerology has been practiced for thousands of years as part of Vedic mathematics and astrology.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item" data-category="basics">
+        <div class="faq-question">
+          <h3>Is numerology a science or a spiritual practice?</h3>
+          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+          <p>Numerology is considered a metaphysical science or spiritual practice rather than a conventional science. While it uses mathematical calculations, it is based on the mystical and symbolic properties of numbers rather than empirical scientific methods. Many people find value in numerology as a tool for self-discovery and personal growth.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item" data-category="basics">
+        <div class="faq-question">
+          <h3>How does numerology relate to Indian culture and traditions?</h3>
+          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+          <p>In Indian culture, numerology (known as "Ank Shastra" in Hindi) has been practiced for thousands of years and is closely tied to Vedic astrology (Jyotish). It is often used in naming ceremonies, determining auspicious dates for important events, and understanding one's destiny. Many Indian families consult numerologists for naming their children, businesses, and even for selecting house numbers that will bring positive energy.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item" data-category="basics">
+        <div class="faq-question">
+          <h3>What are the core numbers in numerology?</h3>
+          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+          <p>The core numbers in numerology include: Life Path Number (derived from birth date), Destiny/Expression Number (derived from full birth name), Soul Urge/Heart's Desire Number (derived from vowels in name), Personality Number (derived from consonants in name), and Birth Day Number (the day of the month you were born). Each of these numbers reveals different aspects of your character and life journey.</p>
+        </div>
+      </div>
+      
+      <!-- Calculations -->
+      <div class="faq-item" data-category="calculations">
+        <div class="faq-question">
+          <h3>How is the Life Path Number calculated?</h3>
+          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+          <p>The Life Path Number is calculated by reducing your full birth date to a single digit (or master number). For example, if you were born on September 15, 1985, you would calculate: 9 (month) + 1+5 (day) + 1+9+8+5 (year) = 38. Then reduce: 3+8 = 11. Since 11 is a master number, you can keep it as 11, or further reduce: 1+1 = 2. Your Life Path Number would be 11/2.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item" data-category="calculations">
+        <div class="faq-question">
+          <h3>How is the Destiny/Expression Number calculated?</h3>
+          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+          <p>The Destiny Number is calculated by assigning numerical values to each letter in your full birth name and then reducing the sum to a single digit (or master number). In the Pythagorean system: A=1, B=2, C=3, D=4, E=5, F=6, G=7, H=8, I=9, J=1, K=2, and so on. Add all the numbers together and reduce to a single digit or master number.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item" data-category="calculations">
+        <div class="faq-question">
+          <h3>What are master numbers in numerology?</h3>
+          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+          <p>Master numbers in numerology are 11, 22, and 33. These numbers are not reduced to a single digit because they are considered to have special significance and power. They represent a higher spiritual plane and indicate potential for spiritual growth and achievement. People with master numbers in their core numerology chart often face greater challenges but also have greater potential for achievement.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item" data-category="calculations">
+        <div class="faq-question">
+          <h3>Should I use my current name or birth name for calculations?</h3>
+          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+          <p>For most numerology calculations, your birth name (the name given to you at birth) is used to calculate your Destiny/Expression Number, Soul Urge Number, and Personality Number as these relate to your inherent qualities and life purpose. However, if you've legally changed your name and use it consistently, this new name can also be analyzed to understand how it might be influencing your current life path and experiences.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item" data-category="calculations">
+        <div class="faq-question">
+          <h3>How do I calculate my Personal Year Number?</h3>
+          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+          <p>To calculate your Personal Year Number, add the month and day of your birth to the current year. For example, if you were born on May 15 and the current year is 2025, you would calculate: 5 (May) + 1+5 (day) + 2+0+2+5 (year) = 20. Then reduce: 2+0 = 2. Your Personal Year Number for 2025 would be 2, indicating a year focused on relationships, patience, and cooperation.</p>
+        </div>
+      </div>
+      
+      <!-- Readings -->
+      <div class="faq-item" data-category="readings">
+        <div class="faq-question">
+          <h3>What is a Life Path Number and what does it reveal?</h3>
+          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+          <p>The Life Path Number is considered the most important number in your numerology chart. Derived from your birth date, it reveals your life's purpose, the path you'll take through life, your natural talents, and the challenges you may face. It provides insights into your character traits, strengths, weaknesses, and the opportunities that are likely to come your way throughout your lifetime.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item" data-category="readings">
+        <div class="faq-question">
+          <h3>What is a Destiny/Expression Number and what does it reveal?</h3>
+          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+          <p>The Destiny or Expression Number is derived from your full birth name and reveals your natural abilities, talents, and the goals you're likely to achieve in this lifetime. It represents your potential and the qualities you can express to fulfill your destiny. This number provides insights into your vocational aptitudes and the type of work that might bring you the greatest satisfaction.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item" data-category="readings">
+        <div class="faq-question">
+          <h3>What is a Soul Urge/Heart's Desire Number and what does it reveal?</h3>
+          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+          <p>The Soul Urge or Heart's Desire Number is calculated from the vowels in your full birth name. It reveals your inner cravings, motivations, and what truly makes you happy. This number represents your inner emotional self and what you truly desire at your core, even if you don't express these desires outwardly. Understanding your Soul Urge Number can help you align your life choices with your deepest desires.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item" data-category="readings">
+        <div class="faq-question">
+          <h3>What is a Personality Number and what does it reveal?</h3>
+          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+          <p>The Personality Number is calculated from the consonants in your full birth name. It reveals how others perceive you and the aspects of yourself that you're willing to share with the world. This number represents your outer personality—the face you show to others and your first impression. It can provide insights into how you interact with the world and how others see you.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item" data-category="readings">
+        <div class="faq-question">
+          <h3>How accurate are numerology readings?</h3>
+          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+          <p>The accuracy of numerology readings depends on several factors including the skill and experience of the numerologist, the system being used, and the accuracy of the birth information provided. Many people find that numerology provides remarkably accurate insights into their character and life patterns. However, like any metaphysical practice, it's best approached with an open mind and used as a tool for self-reflection rather than absolute prediction.</p>
+        </div>
+      </div>
+      
+      <!-- Services -->
+      <div class="faq-item" data-category="services">
+        <div class="faq-question">
+          <h3>What types of numerology readings do you offer?</h3>
+          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+          <p>We offer a variety of numerology readings including: Basic Numerology Profile (covering Life Path, Destiny, Soul Urge, and Personality Numbers), Comprehensive Life Reading (including all core numbers plus yearly forecasts), Relationship Compatibility Analysis, Name Analysis for babies or business naming, Career Guidance Reading, and Personal Year Forecasts. Each reading is tailored to address specific areas of interest or concern.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item" data-category="services">
+        <div class="faq-question">
+          <h3>How long does a numerology reading take?</h3>
+          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+          <p>The duration of a numerology reading depends on the type and depth of the reading. A basic reading typically takes 30-45 minutes, while a comprehensive life reading may take 60-90 minutes. Relationship compatibility readings usually take about 60 minutes. We always ensure that there's enough time to explain the findings in detail and answer any questions you might have.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item" data-category="services">
+        <div class="faq-question">
+          <h3>Do you offer online/remote numerology readings?</h3>
+          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes, we offer online numerology readings via video call platforms like Zoom, Google Meet, or WhatsApp. Remote readings are just as effective as in-person readings since numerology is based on your birth date and name rather than physical presence. We also offer written report options that can be delivered via email for those who prefer to review their reading at their own pace.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item" data-category="services">
+        <div class="faq-question">
+          <h3>How much do your numerology services cost?</h3>
+          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+          <p>Our numerology services range in price depending on the type and depth of the reading. Basic readings start at ₹1,500, while comprehensive life readings are ₹3,500. Relationship compatibility analyses are ₹2,500, and personal year forecasts are ₹1,800. We also offer package deals for multiple readings. Please visit our pricing page for current rates and special offers.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item" data-category="services">
+        <div class="faq-question">
+          <h3>How do I prepare for a numerology reading?</h3>
+          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+          <p>To prepare for a numerology reading, ensure you have accurate information about your full birth name (as it appears on your birth certificate) and your exact date of birth. It's helpful to come with specific questions or areas of life you'd like insights about. Approach the reading with an open mind and be ready to reflect on the information provided. You might want to take notes or record the session (with permission) to review later.</p>
+        </div>
+      </div>
+      
+      <!-- Practical Applications -->
+      <div class="faq-item" data-category="practical">
+        <div class="faq-question">
+          <h3>Can numerology help with choosing a baby name?</h3>
+          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes, numerology can be very helpful when choosing a baby name. By analyzing the numerical value of potential names in relation to the baby's birth date, a numerologist can suggest names that create harmonious energy and support the child's life path. In Indian culture, this is a common practice known as "Namkaran" where names are chosen based on astrological and numerological principles to bring good fortune to the child.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item" data-category="practical">
+        <div class="faq-question">
+          <h3>Can numerology help with business decisions?</h3>
+          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+          <p>Numerology can provide valuable insights for business decisions, particularly in areas such as business naming, logo design, launch dates, and understanding team dynamics. Many successful Indian businesses use numerology to select auspicious company names, registration dates, and even office addresses. Numerology can also help identify favorable periods for expansion, investment, or launching new products.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item" data-category="practical">
+        <div class="faq-question">
+          <h3>How can numerology help with relationship compatibility?</h3>
+          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+          <p>Numerology can provide insights into relationship compatibility by analyzing the interaction between two people's core numbers. By comparing Life Path Numbers, Destiny Numbers, and other key numerological indicators, a numerologist can identify areas of natural harmony and potential challenges in a relationship. This information can help couples understand each other better and develop strategies for navigating differences.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item" data-category="practical">
+        <div class="faq-question">
+          <h3>Can numerology help with choosing auspicious dates?</h3>
+          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes, numerology is frequently used to select auspicious dates for important events such as weddings, house warming ceremonies (griha pravesh), business launches, and contract signings. In Indian tradition, this practice is often combined with Vedic astrology to determine the most favorable muhurat (auspicious time). By choosing dates that align with your personal numbers, you can potentially enhance the success and positive energy of your endeavors.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item" data-category="practical">
+        <div class="faq-question">
+          <h3>How can I use numerology in my daily life?</h3>
+          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+          <p>You can incorporate numerology into your daily life by being aware of your Personal Day Number (calculated by adding your Personal Year Number to the day of the month), understanding the energy of different calendar days, and aligning activities with favorable numbers. Many people use numerology to choose optimal days for important meetings, starting new projects, or making significant decisions. You can also use numerology to better understand your reactions to different situations and people.</p>
+        </div>
+      </div>
+      
+      <!-- Additional FAQs -->
+      <div class="faq-item" data-category="basics">
+        <div class="faq-question">
+          <h3>What is the difference between Western and Vedic numerology?</h3>
+          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+          <p>Western numerology (Pythagorean system) assigns numbers 1-9 to letters in a specific pattern (A=1, B=2, etc.) and focuses on birth date and name analysis. Vedic numerology (Chaldean system), commonly practiced in India, assigns numbers based on sound vibrations, uses 1-8 (with 9 considered divine), and incorporates more spiritual elements. Vedic numerology also places greater emphasis on name correction and remedial measures to enhance positive energies.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item" data-category="calculations">
+        <div class="faq-question">
+          <h3>How do I calculate my Name Number in Vedic numerology?</h3>
+          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+          <p>In Vedic (Chaldean) numerology, letters are assigned values: 1 (A, I, J, Q, Y), 2 (B, K, R), 3 (C, G, L, S), 4 (D, M, T), 5 (E, H, N, X), 6 (U, V, W), 7 (O, Z), and 8 (F, P). Add the values of all letters in your name and reduce to a single digit unless it's 11, 22, or 33. For example, "AMIT" would be 1+4+1+4=10, which reduces to 1. This system is widely used in traditional Indian numerology.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item" data-category="readings">
+        <div class="faq-question">
+          <h3>What is a Karmic Debt Number and how does it affect me?</h3>
+          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+          <p>Karmic Debt Numbers (13, 14, 16, and 19) in your chart indicate challenges from past lives that need to be addressed in this lifetime. For example, 13 suggests you need to learn diligence and proper use of freedom, while 14 relates to control issues and moderation. In Indian philosophy, this connects to the concept of karma—actions from previous lives that influence your current existence. Working through these challenges leads to spiritual growth.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item" data-category="services">
+        <div class="faq-question">
+          <h3>Do you provide name correction services?</h3>
+          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes, we offer name correction services based on numerological principles. This is particularly popular in Indian culture, where making subtle changes to name spelling can potentially improve its vibrational harmony with your birth energy. Our numerologists can suggest modifications that maintain the sound and essence of your name while optimizing its numerical value to better support your life path and aspirations.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item" data-category="practical">
+        <div class="faq-question">
+          <h3>Can numerology help with selecting a favorable house or apartment number?</h3>
+          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes, numerology can guide you in selecting a favorable house or apartment number that resonates positively with your personal numbers. In India, this practice is quite common, with many people specifically requesting certain numbers when purchasing property. The energy of your living space can influence your daily life, so choosing a home number that supports your goals and well-being can be beneficial for creating a harmonious living environment.</p>
+        </div>
+      </div>
+      
+      <!-- Continue with more FAQs to reach 100 total -->
+      <!-- The remaining FAQs would be added here -->
+      
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2>Still Have Questions?</h2>
+    <p>Our numerology experts are here to help you understand the mystical world of numbers.</p>
+    <a href="/contact" class="btn btn-primary">Contact Us</a>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // FAQ toggle functionality
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    
+    faqQuestions.forEach(question => {
+      question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        const icon = question.querySelector('.faq-toggle i');
+        
+        // Toggle answer visibility
+        answer.classList.toggle('active');
+        
+        // Toggle icon
+        if (icon.classList.contains('fa-plus')) {
+          icon.classList.remove('fa-plus');
+          icon.classList.add('fa-minus');
+        } else {
+          icon.classList.remove('fa-minus');
+          icon.classList.add('fa-plus');
+        }
+      });
+    });
+    
+    // Category filter functionality
+    const categoryButtons = document.querySelectorAll('.faq-category');
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    categoryButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const category = button.dataset.category;
+        
+        // Update active button
+        categoryButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        
+        // Filter FAQ items
+        faqItems.forEach(item => {
+          if (category === 'all' || item.dataset.category === category) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+    
+    // Search functionality
+    const searchInput = document.getElementById('faqSearch');
+    
+    searchInput.addEventListener('input', () => {
+      const searchTerm = searchInput.value.toLowerCase();
+      
+      faqItems.forEach(item => {
+        const question = item.querySelector('h3').textContent.toLowerCase();
+        const answer = item.querySelector('.faq-answer p').textContent.toLowerCase();
+        
+        if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>

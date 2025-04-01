@@ -1,0 +1,184 @@
+<%- include('partials/header') %>
+
+<section class="page-header">
+  <div class="container">
+    <h1>Submit Your Review</h1>
+    <p>Share your experience with our numerology services to help others on their journey.</p>
+  </div>
+</section>
+
+<section class="submit-review-section">
+  <div class="container">
+    <div class="review-form-container">
+      <form id="reviewForm" class="review-form">
+        <div class="form-group">
+          <label for="name">Your Name*</label>
+          <input type="text" id="name" name="name" required placeholder="Enter your full name">
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email Address*</label>
+          <input type="email" id="email" name="email" required placeholder="Enter your email address">
+          <small>Your email will not be published. It's only for verification purposes.</small>
+        </div>
+        
+        <div class="form-group">
+          <label for="serviceType">Service Type*</label>
+          <select id="serviceType" name="serviceType" required>
+            <option value="" disabled selected>Select the service you received</option>
+            <option value="Life Path Reading">Life Path Number Reading</option>
+            <option value="Destiny Reading">Destiny Number Reading</option>
+            <option value="Compatibility Reading">Compatibility Reading</option>
+            <option value="Name Analysis">Name Analysis</option>
+            <option value="Business Numerology">Business Numerology</option>
+            <option value="Yearly Forecast">Yearly Forecast</option>
+            <option value="Comprehensive Reading">Comprehensive Reading</option>
+            <option value="Career Guidance">Career Guidance</option>
+            <option value="Baby Name Consultation">Baby Name Consultation</option>
+            <option value="Auspicious Date Selection">Auspicious Date Selection</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        
+        <div class="form-group rating-group">
+          <label>Your Rating*</label>
+          <div class="star-rating">
+            <input type="radio" id="star5" name="rating" value="5" required>
+            <label for="star5" title="5 stars"><i class="fas fa-star"></i></label>
+            
+            <input type="radio" id="star4" name="rating" value="4">
+            <label for="star4" title="4 stars"><i class="fas fa-star"></i></label>
+            
+            <input type="radio" id="star3" name="rating" value="3">
+            <label for="star3" title="3 stars"><i class="fas fa-star"></i></label>
+            
+            <input type="radio" id="star2" name="rating" value="2">
+            <label for="star2" title="2 stars"><i class="fas fa-star"></i></label>
+            
+            <input type="radio" id="star1" name="rating" value="1">
+            <label for="star1" title="1 star"><i class="fas fa-star"></i></label>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="reviewTitle">Review Title*</label>
+          <input type="text" id="reviewTitle" name="reviewTitle" required placeholder="Summarize your experience in a few words">
+        </div>
+        
+        <div class="form-group">
+          <label for="reviewContent">Your Review*</label>
+          <textarea id="reviewContent" name="reviewContent" rows="6" required placeholder="Share the details of your experience with our numerology services"></textarea>
+        </div>
+        
+        <div class="form-group consent-group">
+          <input type="checkbox" id="consent" name="consent" required>
+          <label for="consent">I consent to having my review and name published on this website.</label>
+        </div>
+        
+        <div class="form-submit">
+          <button type="submit" class="btn btn-primary">Submit Review</button>
+        </div>
+      </form>
+      
+      <div class="review-guidelines">
+        <h3>Review Guidelines</h3>
+        <ul>
+          <li>Please be honest and specific about your experience.</li>
+          <li>Focus on the service quality, accuracy, and overall experience.</li>
+          <li>Avoid including sensitive personal information in your review.</li>
+          <li>All reviews are moderated and will be published within 48 hours if they meet our guidelines.</li>
+          <li>We reserve the right to edit or reject reviews that contain inappropriate content.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="review-success" style="display: none;">
+  <div class="container">
+    <div class="success-message">
+      <i class="fas fa-check-circle"></i>
+      <h2>Thank You for Your Review!</h2>
+      <p>Your feedback has been submitted successfully and will be published after moderation.</p>
+      <a href="/testimonials" class="btn btn-secondary">View All Testimonials</a>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2>Discover Your Numerological Insights</h2>
+    <p>Book a session with our expert numerologists and unlock the power of your numbers.</p>
+    <a href="/booking" class="btn btn-primary">Book Your Session Now</a>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const reviewForm = document.getElementById('reviewForm');
+    const reviewSection = document.querySelector('.submit-review-section');
+    const successSection = document.querySelector('.review-success');
+    
+    // Star rating functionality
+    const starLabels = document.querySelectorAll('.star-rating label');
+    
+    starLabels.forEach((label, index) => {
+      label.addEventListener('mouseover', () => {
+        // Highlight current star and all stars before it
+        for (let i = 0; i <= index; i++) {
+          starLabels[i].classList.add('hover');
+        }
+      });
+      
+      label.addEventListener('mouseout', () => {
+        // Remove highlight from all stars
+        starLabels.forEach(star => star.classList.remove('hover'));
+      });
+    });
+    
+    // Form submission
+    reviewForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Get form data
+      const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        serviceType: document.getElementById('serviceType').value,
+        rating: document.querySelector('input[name="rating"]:checked').value,
+        reviewTitle: document.getElementById('reviewTitle').value,
+        reviewContent: document.getElementById('reviewContent').value
+      };
+      
+      // Submit the review to the server
+      fetch('/api/submit-review', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          // Hide the form section
+          reviewSection.style.display = 'none';
+          
+          // Show the success message
+          successSection.style.display = 'block';
+          
+          // Scroll to success message
+          successSection.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          alert('Error: ' + data.message);
+        }
+      })
+      .catch(error => {
+        console.error('Error submitting review:', error);
+        alert('An error occurred while submitting your review. Please try again.');
+      });
+    });
+  });
+</script>

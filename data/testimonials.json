@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1743491805256",
+    "name": "Shubham Verma",
+    "serviceType": "Life Path Reading",
+    "rating": 4,
+    "title": "Insightful Life Path Reading",
+    "content": "The life path reading was incredibly accurate and provided me with complete guidance on my journey. I now have a much clearer understanding of my purpose and direction.",
+    "date": "2025-04-01T07:16:45.256Z",
+    "approved": true
+  },
+  {
+    "id": "1743491805257",
+    "name": "Priya Sharma",
+    "serviceType": "Compatibility Reading",
+    "rating": 5,
+    "title": "Amazing Compatibility Insights",
+    "content": "The compatibility reading for me and my partner was incredibly accurate. It highlighted our strengths and potential challenges in a way that was constructive and insightful. We now have tools to better understand and support each other.",
+    "date": "2025-03-28T10:30:45.256Z",
+    "approved": true
+  },
+  {
+    "id": "1743491805258",
+    "name": "Vikram Malhotra",
+    "serviceType": "Business Numerology",
+    "rating": 5,
+    "title": "Transformed My Business",
+    "content": "I was skeptical about numerology at first, but my business numerology consultation provided practical insights that have genuinely helped my company grow. The timing advice for launching new projects has been spot on!",
+    "date": "2025-03-25T14:20:45.256Z",
+    "approved": true
+  },
+  {
+    "id": "1743492115721",
+    "name": "Nonu Singh",
+    "serviceType": "Yearly Forecast",
+    "rating": 3,
+    "title": "Best Yearly Predictions Ever",
+    "content": "Thank you so much for the yearly forecast! The predictions were accurate and helped me prepare for important life events. I'll definitely be back next year.",
+    "date": "2025-04-01T07:21:55.721Z",
+    "approved": true
+  }
+]

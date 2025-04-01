@@ -1,0 +1,271 @@
+<%- include('partials/header') %>
+
+<section class="calculator-section">
+  <!-- Add floating elements for visual interest -->
+  <div class="floating-element">✦</div>
+  <div class="floating-element">⋆</div>
+  <div class="floating-element">✧</div>
+  <div class="floating-element">⋇</div>
+  
+  <div class="container">
+    <div class="calculator-header">
+      <h1>Numerology Calculator</h1>
+      <div class="header-decoration">
+        <span class="line-decoration"></span>
+        <span class="star-symbol">✧</span>
+        <span class="line-decoration"></span>
+      </div>
+      <p class="section-description">Enter your full name and date of birth to discover your key numerology numbers and their meanings.</p>
+    </div>
+    
+    <div class="calculator-container">
+      <div class="calculator-wrapper">
+        <form id="numerologyForm" class="calculator-form">
+          <div class="form-group">
+            <label for="fullName">Full Name (as given at birth)</label>
+            <div class="input-wrapper">
+              <i class="fas fa-user input-icon"></i>
+              <input type="text" id="fullName" name="fullName" required placeholder="e.g. John Michael Smith" class="animated-input">
+              <span class="focus-border"></span>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="birthdate">Date of Birth</label>
+            <div class="input-wrapper">
+              <i class="fas fa-calendar-alt input-icon"></i>
+              <input type="text" id="birthdate" name="birthdate" required placeholder="YYYY-MM-DD" class="animated-input">
+              <span class="focus-border"></span>
+              <small class="input-help">Enter your date of birth in YYYY-MM-DD format (e.g., 1990-05-15)</small>
+            </div>
+          </div>
+          
+          <button type="submit" class="btn btn-primary btn-block calculate-btn">
+            <span class="btn-text">Calculate My Numbers</span>
+            <span class="btn-icon"><i class="fas fa-calculator"></i></span>
+          </button>
+        </form>
+      </div>
+      
+      <div id="results" class="results-container" style="display: none;">
+        <h2>Your Numerology Results</h2>
+        <div class="results-decoration">
+          <div class="decoration-line"></div>
+          <div class="decoration-circle"></div>
+          <div class="decoration-line"></div>
+        </div>
+        
+        <div class="result-cards-container">
+          <div class="result-card">
+            <div class="result-header">
+              <i class="fas fa-road"></i>
+              <h3>Life Path Number</h3>
+            </div>
+            <div class="result-number-container">
+              <div class="result-number" id="lifePathNumber"></div>
+              <div class="number-glow"></div>
+            </div>
+            <div class="result-description" id="lifePathDescription"></div>
+          </div>
+          
+          <div class="result-card">
+            <div class="result-header">
+              <i class="fas fa-star"></i>
+              <h3>Destiny Number</h3>
+            </div>
+            <div class="result-number-container">
+              <div class="result-number" id="destinyNumber"></div>
+              <div class="number-glow"></div>
+            </div>
+            <div class="result-description" id="destinyDescription"></div>
+          </div>
+          
+          <div class="result-card">
+            <div class="result-header">
+              <i class="fas fa-user"></i>
+              <h3>Personality Number</h3>
+            </div>
+            <div class="result-number-container">
+              <div class="result-number" id="personalityNumber"></div>
+              <div class="number-glow"></div>
+            </div>
+            <div class="result-description" id="personalityDescription"></div>
+          </div>
+          
+          <div class="result-card">
+            <div class="result-header">
+              <i class="fas fa-heart"></i>
+              <h3>Soul Urge Number</h3>
+            </div>
+            <div class="result-number-container">
+              <div class="result-number" id="soulUrgeNumber"></div>
+              <div class="number-glow"></div>
+            </div>
+            <div class="result-description" id="soulUrgeDescription"></div>
+          </div>
+        </div>
+        
+        <div class="save-results">
+          <button id="saveResults" class="btn btn-secondary">
+            <i class="fas fa-save"></i> Save Results
+          </button>
+          <button id="printResults" class="btn btn-secondary">
+            <i class="fas fa-print"></i> Print Results
+          </button>
+          <button id="shareResults" class="btn btn-secondary">
+            <i class="fas fa-share-alt"></i> Share Results
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="number-preview">
+  <div class="container">
+    <h2>Understanding Your Numbers</h2>
+    <div class="section-decoration">
+      <span class="star-symbol">✧</span>
+      <span class="line-decoration"></span>
+      <span class="star-symbol">✧</span>
+    </div>
+    <p>Each numerology number carries unique vibrations and meanings. Here's a quick overview:</p>
+    
+    <div class="number-grid">
+      <div class="number-item" data-number="1">
+        <div class="number-circle">1</div>
+        <p>Leadership, independence, originality</p>
+      </div>
+      <div class="number-item" data-number="2">
+        <div class="number-circle">2</div>
+        <p>Cooperation, diplomacy, sensitivity</p>
+      </div>
+      <div class="number-item" data-number="3">
+        <div class="number-circle">3</div>
+        <p>Creativity, expression, joy</p>
+      </div>
+      <div class="number-item" data-number="4">
+        <div class="number-circle">4</div>
+        <p>Stability, practicality, organization</p>
+      </div>
+      <div class="number-item" data-number="5">
+        <div class="number-circle">5</div>
+        <p>Freedom, change, adventure</p>
+      </div>
+      <div class="number-item" data-number="6">
+        <div class="number-circle">6</div>
+        <p>Harmony, responsibility, love</p>
+      </div>
+      <div class="number-item" data-number="7">
+        <div class="number-circle">7</div>
+        <p>Analysis, wisdom, spirituality</p>
+      </div>
+      <div class="number-item" data-number="8">
+        <div class="number-circle">8</div>
+        <p>Power, abundance, achievement</p>
+      </div>
+      <div class="number-item" data-number="9">
+        <div class="number-circle">9</div>
+        <p>Compassion, completion, humanitarianism</p>
+      </div>
+      <div class="number-item master-number" data-number="11">
+        <div class="number-circle">11</div>
+        <p>Intuition, spiritual insight, enlightenment</p>
+      </div>
+      <div class="number-item master-number" data-number="22">
+        <div class="number-circle">22</div>
+        <p>Master builder, manifestation, vision</p>
+      </div>
+      <div class="number-item master-number" data-number="33">
+        <div class="number-circle">33</div>
+        <p>Compassion, healing, spiritual teaching</p>
+      </div>
+    </div>
+    
+    <div class="learn-more-container">
+      <p class="learn-more">For detailed interpretations of each number, visit our <a href="/meanings">Number Meanings</a> page.</p>
+      <div class="floating-symbols">
+        <span class="floating-symbol">✦</span>
+        <span class="floating-symbol">✧</span>
+        <span class="floating-symbol">⋆</span>
+        <span class="floating-symbol">✦</span>
+        <span class="floating-symbol">✧</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Add animation for number items
+  document.addEventListener('DOMContentLoaded', function() {
+    const numberItems = document.querySelectorAll('.number-item');
+    
+    // Create Intersection Observer
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Add animation with delay based on data-number attribute
+          const numberValue = parseInt(entry.target.getAttribute('data-number'));
+          const delay = (numberValue % 12) * 0.1; // Stagger animation based on number
+          
+          entry.target.style.transitionDelay = `${delay}s`;
+          entry.target.classList.add('animate-in');
+          
+          // Unobserve after animation
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+    
+    // Observe each number item
+    numberItems.forEach(item => {
+      observer.observe(item);
+    });
+    
+    // Add hover effect for number circles
+    numberItems.forEach(item => {
+      const circle = item.querySelector('.number-circle');
+      
+      item.addEventListener('mouseenter', () => {
+        // Add glow effect
+        circle.classList.add('glow');
+        
+        // Add floating particles
+        const particles = 5;
+        for (let i = 0; i < particles; i++) {
+          const particle = document.createElement('span');
+          particle.className = 'particle';
+          
+          // Random position around the circle
+          const angle = Math.random() * 360;
+          const distance = 20 + Math.random() * 30;
+          const x = Math.cos(angle * Math.PI / 180) * distance;
+          const y = Math.sin(angle * Math.PI / 180) * distance;
+          
+          // Set particle properties
+          particle.style.left = `calc(50% + ${x}px)`;
+          particle.style.top = `calc(50% + ${y}px)`;
+          particle.style.animationDelay = `${Math.random() * 0.5}s`;
+          particle.style.animationDuration = `${0.5 + Math.random() * 1}s`;
+          
+          circle.appendChild(particle);
+          
+          // Remove particle after animation
+          setTimeout(() => {
+            if (particle.parentNode === circle) {
+              circle.removeChild(particle);
+            }
+          }, 1500);
+        }
+      });
+      
+      item.addEventListener('mouseleave', () => {
+        circle.classList.remove('glow');
+      });
+    });
+  });
+</script>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,135 @@
+<%- include('partials/header') %>
+
+<section class="page-header">
+  <div class="container">
+    <h1>Client Testimonials</h1>
+    <p>Discover what our clients have to say about their numerology consultation experiences.</p>
+  </div>
+</section>
+
+<section class="testimonials-grid">
+  <div class="container">
+    <div class="testimonial-cards">
+      <% if (testimonials && testimonials.length > 0) { %>
+        <% testimonials.filter(t => t.approved).forEach(testimonial => { %>
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <i class="fas fa-quote-left"></i>
+              <p><%= testimonial.content %></p>
+            </div>
+            <div class="testimonial-footer">
+              <div class="testimonial-info">
+                <h3><%= testimonial.name %></h3>
+                <p><%= testimonial.serviceType %></p>
+                <div class="rating">
+                  <% for(let i = 0; i < 5; i++) { %>
+                    <% if (i < testimonial.rating) { %>
+                      <i class="fas fa-star"></i>
+                    <% } else { %>
+                      <i class="far fa-star"></i>
+                    <% } %>
+                  <% } %>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% }); %>
+      <% } else { %>
+        <!-- Default testimonials if none are available -->
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <i class="fas fa-quote-left"></i>
+            <p>The compatibility reading for me and my partner was incredibly accurate. It highlighted our strengths and potential challenges in a way that was constructive and insightful. We now have tools to better understand and support each other.</p>
+          </div>
+          <div class="testimonial-footer">
+            <div class="testimonial-info">
+              <h3>Priya Patel</h3>
+              <p>Compatibility Reading</p>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <i class="fas fa-quote-left"></i>
+            <p>I was skeptical about numerology at first, but my business numerology consultation provided practical insights that have genuinely helped my company grow. The timing advice for launching new projects has been spot on!</p>
+          </div>
+          <div class="testimonial-footer">
+            <div class="testimonial-info">
+              <h3>Vikram Malhotra</h3>
+              <p>Business Numerology</p>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <i class="fas fa-quote-left"></i>
+            <p>The yearly forecast reading was incredibly detailed and accurate. It helped me navigate a challenging year with confidence and make better decisions. I've already booked my reading for next year!</p>
+          </div>
+          <div class="testimonial-footer">
+            <div class="testimonial-info">
+              <h3>Aisha Khan</h3>
+              <p>Yearly Forecast</p>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 4 -->
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <i class="fas fa-quote-left"></i>
+            <p>The numerology consultation for my new business name was incredibly valuable. The insights helped me choose a name that resonates with success and prosperity. Within months, my business started flourishing!</p>
+          </div>
+          <div class="testimonial-footer">
+            <div class="testimonial-info">
+              <h3>Arjun Nair</h3>
+              <p>Business Name Analysis</p>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% } %>
+    </div>
+  </div>
+</section>
+
+<section class="submit-testimonial">
+  <div class="container">
+    <h2>Share Your Experience</h2>
+    <p>We'd love to hear about your numerology consultation experience. Your feedback helps us improve our services and assists others in making informed decisions.</p>
+    <a href="/submit-review" class="btn btn-primary">Submit Your Review</a>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
