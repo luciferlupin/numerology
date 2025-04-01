@@ -76,6 +76,24 @@ The application calculates the following numerology numbers:
 2. **Destiny Number**: Calculated from your full name, shows your goals and abilities
 3. **Personality Number**: Based on the consonants in your name, shows how others perceive you
 
+## Deployment on Vercel
+
+This project is ready to be deployed on Vercel. Follow these steps to deploy:
+
+1. Push your code to a GitHub repository
+2. Sign up or log in to [Vercel](https://vercel.com)
+3. Click "New Project" and import your GitHub repository
+4. Configure the project:
+   - Framework Preset: Select "Other"
+   - Build Command: Leave as default (npm run build)
+   - Output Directory: Leave as default
+   - Install Command: `npm install`
+   - Development Command: `npm run dev`
+5. Add environment variables from your `.env` file
+6. Click "Deploy"
+
+Once deployed, Vercel will provide you with a URL to access your live numerology website.
+
 ## Future Enhancements
 
 - User accounts to save readings
