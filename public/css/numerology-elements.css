@@ -1,0 +1,99 @@
+/* Numerology Elements CSS */
+
+/* Mystical number background elements */
+.mystical-number {
+  position: absolute;
+  font-family: 'Times New Roman', serif;
+  opacity: 0.3;
+  color: #6a5acd;
+  user-select: none;
+  pointer-events: none;
+  z-index: 1;
+  transform: rotate(var(--rotation));
+  text-shadow: 0 0 5px rgba(106, 90, 205, 0.5);
+  font-weight: bold;
+}
+
+/* Sacred geometry elements */
+.sacred-geometry {
+  position: absolute;
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 1;
+  box-shadow: 0 0 15px rgba(147, 112, 219, 0.6);
+}
+
+.sacred-geometry.triangle {
+  width: 0;
+  height: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 104px solid #9370db;
+}
+
+.sacred-geometry.circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #9370db;
+}
+
+.sacred-geometry.square {
+  width: 100px;
+  height: 100px;
+  border: 3px solid #9370db;
+}
+
+/* Zodiac symbols */
+.zodiac-symbol {
+  position: absolute;
+  font-size: 32px;
+  opacity: 0.5;
+  color: #483d8b;
+  user-select: none;
+  pointer-events: none;
+  z-index: 1;
+  text-shadow: 0 0 8px rgba(72, 61, 139, 0.7);
+}
+
+/* Numerology chart elements */
+.numerology-chart {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border: 2px solid #9370db;
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 1;
+  box-shadow: 0 0 20px rgba(147, 112, 219, 0.5);
+}
+
+.numerology-chart.grid {
+  background-image: linear-gradient(to right, #9370db 1px, transparent 1px),
+                    linear-gradient(to bottom, #9370db 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .mystical-number {
+    font-size: 70px !important;
+    opacity: 0.25;
+  }
+  
+  .sacred-geometry {
+    transform: scale(0.8);
+    opacity: 0.35;
+  }
+  
+  .zodiac-symbol {
+    font-size: 24px;
+    opacity: 0.45;
+  }
+  
+  .numerology-chart {
+    width: 120px;
+    height: 120px;
+    opacity: 0.3;
+  }
+}

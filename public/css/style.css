@@ -5702,239 +5702,6 @@ p, h1, h2, h3, h4, h5, h6, a, li, label, td, th, span, div {
   color: #fff !important;
 }
 
-/* Improve visibility for form elements */
-input, textarea, select {
-  color: #333 !important;
-  background-color: #fff !important;
-  border: 1px solid rgba(0, 0, 0, 0.2) !important;
-}
-
-/* Fix for gradient text */
-.gradient-text, [style*="background-clip: text"] {
-  background-clip: unset !important;
-  -webkit-background-clip: unset !important;
-  color: var(--primary-color) !important;
-  -webkit-text-fill-color: var(--primary-color) !important;
-}
-
-/* Fix for any text with low opacity */
-[style*="opacity"] {
-  opacity: 1 !important;
-}
-
-/* Fix for any text with visibility hidden */
-[style*="visibility: hidden"] {
-  visibility: visible !important;
-}
-
-/* Ensure calculator results are visible */
-.results-container * {
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
-/* Fix for any text in cards */
-.card *, .service-card *, .feature-card *, 
-.testimonial *, .faq-item * {
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
-/* Fix for any animated elements that should be visible */
-.animated-element, .floating-element, 
-.number-node, .planet, .star {
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
-/* Ensure all animated elements are visible */
-.animated-element, .floating-element, 
-.number-node, .planet, .star {
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
-/* Fix for any hidden content that should be visible */
-.hidden-content, .collapse-content {
-  display: block !important;
-  height: auto !important;
-  overflow: visible !important;
-}
-
-/* Ensure FAQ answers are visible */
-.faq-answer {
-  display: block !important;
-  height: auto !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
-/* Fix for mobile menu */
-@media screen and (max-width: 768px) {
-  nav ul {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    height: auto !important;
-  }
-}
-
-/* Services Preview Section - Home Page */
-.services-preview {
-  padding: 80px 0;
-  background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
-  position: relative;
-}
-
-.services-preview h2 {
-  text-align: center;
-  margin-bottom: 50px;
-  font-size: 2.5rem;
-  color: var(--heading-color);
-  position: relative;
-}
-
-.services-preview h2::after {
-  content: '';
-  display: block;
-  width: 80px;
-  height: 3px;
-  background: var(--primary-color);
-  margin: 15px auto 0;
-}
-
-/* Larger service cards for home page */
-.services-preview .service-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto 40px;
-}
-
-.services-preview .service-card {
-  background-color: white;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-  transition: all 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid rgba(255, 123, 0, 0.1);
-  height: 100%;
-  position: relative;
-  transform: translateY(0);
-  padding: 30px;
-  min-height: 320px;
-}
-
-.services-preview .service-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(var(--primary-rgb), 0.15);
-}
-
-.services-preview .service-card i {
-  font-size: 3.5rem;
-  margin-bottom: 20px;
-  color: var(--primary-color);
-  transition: all 0.5s ease;
-}
-
-.services-preview .service-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: var(--heading-color);
-}
-
-.services-preview .service-card p {
-  color: var(--text-color);
-  line-height: 1.6;
-  margin-bottom: 20px;
-  flex-grow: 1;
-  font-size: 1rem;
-}
-
-/* Responsive styles for home page services */
-@media screen and (max-width: 1200px) {
-  .services-preview .service-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-  
-  .services-preview .service-card {
-    padding: 25px;
-    min-height: 300px;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .services-preview .service-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .services-preview .service-card i {
-    font-size: 3rem;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .services-preview .service-grid {
-    grid-template-columns: 1fr;
-    max-width: 500px;
-  }
-  
-  .services-preview .service-card {
-    min-height: auto;
-    padding: 30px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .services-preview .service-card {
-    padding: 25px;
-  }
-  
-  .services-preview .service-card i {
-    font-size: 2.8rem;
-  }
-}
-
-/* Change link colors from orange to black for better visibility */
-a {
-  color: #000 !important;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-a:hover {
-  color: #333 !important;
-}
-
-/* Override specific button styles to maintain their appearance */
-.btn-primary, .btn-secondary {
-  color: #fff !important;
-}
-
-.btn-primary:hover, .btn-secondary:hover {
-  color: #fff !important;
-}
-
-.btn-outline {
-  color: #000 !important;
-}
-
-.btn-outline:hover {
-  color: #fff !important;
-}
-
-/* Change testimonial footer text color to black */
-.testimonial-footer, 
-.testimonial-info, 
-.testimonial-info h3, 
-.testimonial-info p {
-  color: #000 !important;
-}
-
 /* Ensure rating stars are visible */
 .rating i {
   color: #ffc107 !important; /* Keep stars gold/yellow */
@@ -5970,4 +5737,596 @@ a:hover {
 .page-header h1,
 .page-header p {
   color: #000 !important;
+}
+
+/* Mobile Menu Styles */
+.mobile-menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-toggle:hover {
+  color: var(--secondary-color);
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: block;
+  }
+  
+  .main-nav {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: calc(100vh - 70px);
+    background-color: white;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease;
+    z-index: 1000;
+    overflow-y: auto;
+  }
+  
+  .main-nav.active {
+    left: 0;
+  }
+  
+  .main-nav ul {
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .main-nav ul li {
+    margin: 0 0 15px 0;
+  }
+  
+  .main-nav ul li a {
+    display: block;
+    padding: 10px 0;
+  }
+  
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+  
+  .overlay.active {
+    display: block;
+  }
+}
+
+/* Book a Session Button in Header */
+.btn-book {
+  background-color: var(--primary-color);
+  color: white !important;
+  padding: 8px 15px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.btn-book:hover {
+  background-color: black;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design Improvements */
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 95%;
+    max-width: 1140px;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+  }
+  
+  .services-grid,
+  .features-grid,
+  .testimonials-grid,
+  .about-grid,
+  .pricing-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    width: 95%;
+    max-width: 960px;
+  }
+  
+  section {
+    padding: 60px 0;
+  }
+  
+  .hero {
+    padding: 100px 0;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .services-grid,
+  .features-grid,
+  .testimonials-grid,
+  .about-grid,
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .contact-form-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-info {
+    margin-top: 40px;
+  }
+  
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  .calculator-form,
+  .calculator-results {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 95%;
+    max-width: 720px;
+  }
+  
+  section {
+    padding: 50px 0;
+  }
+  
+  .hero {
+    padding: 80px 0;
+    min-height: auto;
+  }
+  
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+  }
+  
+  .services-grid,
+  .features-grid,
+  .testimonials-grid,
+  .about-grid,
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .service-card,
+  .feature-card,
+  .testimonial-card,
+  .pricing-card {
+    max-width: 100%;
+  }
+  
+  .modal-content {
+    width: 95%;
+    margin: 10% auto;
+  }
+  
+  .modal-header {
+    padding: 15px;
+  }
+  
+  .modal-body {
+    padding: 15px;
+  }
+  
+  .calculator-container {
+    flex-direction: column;
+  }
+  
+  .calculator-form,
+  .calculator-results {
+    width: 100%;
+    margin: 0;
+  }
+  
+  .calculator-results {
+    margin-top: 30px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-control {
+    padding: 10px 15px;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+  
+  .footer-col {
+    text-align: center;
+  }
+  
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    width: 95%;
+    max-width: 540px;
+    padding: 0 10px;
+  }
+  
+  section {
+    padding: 40px 0;
+  }
+  
+  .hero {
+    padding: 60px 0;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+  
+  .feature-card,
+  .service-card,
+  .testimonial-card,
+  .pricing-card {
+    padding: 20px;
+  }
+  
+  .feature-icon,
+  .service-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .feature-card h3,
+  .service-card h3 {
+    font-size: 1.3rem;
+  }
+  
+  .modal-content {
+    margin: 15% auto;
+  }
+  
+  .modal-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .modal-cta {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .modal-cta .btn {
+    width: 100%;
+  }
+  
+  .form-group label {
+    font-size: 0.9rem;
+  }
+  
+  .form-control {
+    font-size: 0.9rem;
+  }
+  
+  .logo h1 {
+    font-size: 1.5rem;
+  }
+  
+  .testimonial-content {
+    font-size: 0.95rem;
+  }
+  
+  .testimonial-author {
+    font-size: 1rem;
+  }
+  
+  .number-value {
+    font-size: 2.5rem;
+  }
+  
+  .number-meaning {
+    font-size: 0.9rem;
+  }
+}
+
+/* Improved Mobile Menu Styles */
+.mobile-menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-toggle:hover {
+  color: var(--secondary-color);
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: block;
+  }
+  
+  .main-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: white;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    padding: 60px 20px 20px;
+    overflow-y: auto;
+  }
+  
+  .main-nav.active {
+    right: 0;
+  }
+  
+  .main-nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .main-nav ul li {
+    width: 100%;
+    margin-left: 0;
+  }
+  
+  .main-nav ul li a {
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+  
+  .overlay.active {
+    display: block;
+  }
+}
+
+/* Responsive Form Improvements */
+@media screen and (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+  
+  .form-group {
+    width: 100%;
+    margin-right: 0;
+  }
+  
+  .input-group {
+    flex-direction: column;
+  }
+  
+  .input-group-append {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .input-group .form-control {
+    width: 100%;
+    border-radius: 4px;
+  }
+  
+  .input-group .btn {
+    border-radius: 4px;
+    width: 100%;
+  }
+}
+
+/* Responsive Table Improvements */
+@media screen and (max-width: 768px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .responsive-table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  .responsive-table thead {
+    display: none;
+  }
+  
+  .responsive-table tbody tr {
+    display: block;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .responsive-table tbody td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    padding: 8px 0;
+    text-align: right;
+  }
+  
+  .responsive-table tbody td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    text-align: left;
+    margin-right: 10px;
+  }
+}
+
+/* Responsive Images */
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Responsive Flex Containers */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .flex-container {
+    flex-direction: column;
+  }
+  
+  .flex-item {
+    width: 100% !important;
+  }
+}
+
+/* Book a Session Button in Header */
+.btn-book {
+  background-color: var(--primary-color);
+  color: white !important;
+  padding: 8px 15px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.btn-book:hover {
+  background-color: black;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Typography */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 0.95rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  h4 {
+    font-size: 1.3rem;
+  }
+  
+  h5 {
+    font-size: 1.1rem;
+  }
+  
+  h6 {
+    font-size: 1rem;
+  }
+  
+  p {
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  body {
+    font-size: 0.9rem;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  h2 {
+    font-size: 1.6rem;
+  }
+  
+  h3 {
+    font-size: 1.4rem;
+  }
+  
+  h4 {
+    font-size: 1.2rem;
+  }
+  
+  h5 {
+    font-size: 1rem;
+  }
+  
+  h6 {
+    font-size: 0.9rem;
+  }
+  
+  p {
+    font-size: 0.9rem;
+  }
 }
