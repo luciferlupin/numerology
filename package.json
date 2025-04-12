@@ -1,7 +1,7 @@
 {
-  "name": "numerology-website",
+  "name": "numerajyotish",
   "version": "1.0.0",
-  "description": "A modern numerology website for calculating and interpreting numerological values",
+  "description": "A modern Vedic numerology website for calculating and interpreting numerological values",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
